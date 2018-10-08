@@ -5,7 +5,7 @@ declare var jwplayer: any;
 @Component({
   selector: 'app-episode-by-id',
   templateUrl: './episode-by-id.component.html',
-  styleUrls: ['./episode-by-id.component.css']
+  styleUrls: ['./episode-by-id.component.scss']
 })
 export class EpisodeByIdComponent implements OnInit {
 

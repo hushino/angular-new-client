@@ -5,7 +5,7 @@ import { ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-serie-by-id',
   templateUrl: './serie-by-id.component.html',
-  styleUrls: ['./serie-by-id.component.css']
+  styleUrls: ['./serie-by-id.component.scss']
 })
 export class SerieByIdComponent implements OnInit {
 

@@ -4,7 +4,7 @@ import { DataService } from 'src/app/data.service';
 @Component({
   selector: 'app-genre-by-id',
   templateUrl: './genre-by-id.component.html',
-  styleUrls: ['./genre-by-id.component.css']
+  styleUrls: ['./genre-by-id.component.scss']
 })
 export class GenreByIdComponent implements OnInit {
 
