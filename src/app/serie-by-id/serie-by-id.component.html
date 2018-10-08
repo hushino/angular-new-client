@@ -1,3 +1,29 @@
-<p>
-  serie-by-id works!
-</p>
+<div class="contenedor">
+  <div class="elemento">
+    <div class="inicio" *ngFor="let id of ids">
+      <!-- <div class="Ficha fchlt">
+    <img class="frontimage img-fluid rounded" src="{{id.frontimage}}" alt="{{id.title}}">
+  </div> -->
+
+
+      <img class="align-self-start mr-3 animeImage img-fluid rounded" src="{{id.backgroundimage}}" alt="{{id.title}}">
+
+      <h2 class="titlde"> {{id.title}} </h2>
+      <p id="app"> {{id.synopsis | slice:0:180}}... </p>
+      <div class="col tags">
+        <ul id="app" *ngFor="let tag of id.tags"> {{tag.gender}}</ul>
+      </div>
+      <!-- class="far fa-play-circle" -->
+      <section class="section">
+        <ul *ngFor="let episode of id.episode">
+          <li class="far fa-play-circle">
+                <!-- <i class="far fa-play-circle"></i> -->
+                <img class="img-fluid rounded" src="{{episode.imageCap}}" alt="{{id.title}}">
+                <h5>{{episode.title}}</h5>
+                <p id="app">Episodio {{episode.episode}}</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

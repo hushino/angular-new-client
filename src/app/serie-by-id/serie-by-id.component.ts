@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
+import { ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-serie-by-id',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SerieByIdComponent implements OnInit {
 
-  constructor() { }
+  ids = [];
+  episodeId = [];
+  tags = [];
+
+  constructor(
+    private dataService: DataService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+
+    this.route.params.subscribe(params => {
+      this.dataService.getAnimeById(params['id']).subscribe(data => {
+        this.ids = data;
+      });
+    });
+    /* this.route.params.subscribe(params => {
+      this.dataService.getEpisodeById(params['id']).subscribe(data => {
+        this.episodeId = data;
+      });
+    });
+    this.route.params.subscribe(params => {
+      this.dataService.getTagsOfAnime(params['id']).subscribe(data => {
+        this.tags = data;
+        console.log(data);
+      });
+    }); */
+
   }
 
 }

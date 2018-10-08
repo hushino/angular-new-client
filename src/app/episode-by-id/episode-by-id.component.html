@@ -1,3 +1,16 @@
-<p>
-  episode-by-id works!
-</p>
+<div class="contenedor">
+  <div class="container">
+    <div class="elementovideo" *ngFor="let id of ids ">
+      <div id="app">
+        <h5>
+          {{id.title}}
+        </h5>
+      </div>
+    </div>
+    <div class="col-9">
+      <div id="player">
+        <h6>Loading...</h6>
+      </div>
+    </div>
+  </div>
+</div>

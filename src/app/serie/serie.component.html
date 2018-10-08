@@ -1,3 +1,8 @@
-<p>
-  serie works!
-</p>
+<div class="contenedor">
+  <div class="elemento">
+    <div class="sada1" *ngFor="let anime of animes ">
+      <img (click)="onShowAnime(anime.id)" class="rounded" src="{{anime.backgroundimage}}" alt="Italian Trulli">
+      <h5>{{anime.title}}</h5>
+    </div>
+  </div>
+</div>

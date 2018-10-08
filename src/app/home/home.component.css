@@ -1,0 +1,14 @@
+.rounded {
+    max-height: 110px !important;
+    max-width: 220px;
+}
+.font{
+    font-size: .85em;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: .6em;
+}
+.col {
+  padding-bottom: 30px;
+}

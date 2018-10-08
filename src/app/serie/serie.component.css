@@ -1,0 +1,11 @@
+.rounded {
+    max-width: 230px;
+    max-height: 400px;
+}
+.font {
+  font-size: 1.10em;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: .6em;
+}
