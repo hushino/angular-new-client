@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { Anime } from './anime';
-import { Home } from './home';
-import { AnimeById } from './animeById';
-import { EpisodeById } from './episodeById';
-import { TagByid } from './tagById';
-import { User } from './user'; 
+import { Anime } from '../models/anime';
+import { Home } from '../models/home';
+import { AnimeById } from '../models/animeById';
+import { EpisodeById } from '../models/episodeById';
+import { TagByid } from '../models/tagById';
+import { User } from '../models/user'; 
 @Injectable({
   providedIn: 'root'
 })

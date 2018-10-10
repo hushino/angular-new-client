@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { DataService } from 'src/app/data.service';
+import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-genre-by-id',
   templateUrl: './genre-by-id.component.html',
