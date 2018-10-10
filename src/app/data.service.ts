@@ -18,9 +18,10 @@ export class DataService {
   getUser(nameofuser: number | string): Observable<User[]> {
     return this.http.get<User[]>('http://localhost:8080/login/l/' + nameofuser);
   }
+
   addAnime(anime: Anime) {
-    //const headers = new HttpHeaders().set('content-type', 'application/json');
-    return this.http.post('http://localhost:8080/v1/animes/',anime) 
+    const headers = new HttpHeaders().set('content-type', 'application/json');
+    return this.http.post('http://localhost:8080/v1/animes/',anime,{headers}) 
   }
   // implementar el paginado con la url correcta
   getAll(): Observable<Anime[]> {

@@ -12,6 +12,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const appRoutes: Routes = [
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   { path: ':id/:id2', component: EpisodeByIdComponent },
   { path: 'tag/getAllAnimeByGenre/:id', component: GenreByIdComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: '**', component: PagenotfoundComponent },
 
 ];
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
     HomeComponent,
     PagenotfoundComponent,
     LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     RouterModule.forRoot(
