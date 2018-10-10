@@ -1,3 +1,9 @@
-<p>
-  login works!
-</p>
+  <form [formGroup]="addForm" >
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" formControlName="title" name="title">
+    </div>
+
+    <button type="submit" class="as" (click)="addOrEdit()">Submit</button>
+
+  </form>

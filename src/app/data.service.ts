@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Anime } from './anime';
 import { Home } from './home';
 import { AnimeById } from './animeById';
 import { EpisodeById } from './episodeById';
 import { TagByid } from './tagById';
-import {User} from './user';
+import { User } from './user'; 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) { }
-
-  getUser(nameofuser: number | string): Observable<User[]>{
-    return this.http.get<User[]>('http://localhost:8080/login/l/'+ nameofuser);
+ 
+  getUser(nameofuser: number | string): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:8080/login/l/' + nameofuser);
   }
-
+  addAnime(anime: Anime) {
+    //const headers = new HttpHeaders().set('content-type', 'application/json');
+    return this.http.post('http://localhost:8080/v1/animes/',anime) 
+  }
   // implementar el paginado con la url correcta
   getAll(): Observable<Anime[]> {
     return this.http.get<Anime[]>('http://localhost:8080/v1/animes/');
