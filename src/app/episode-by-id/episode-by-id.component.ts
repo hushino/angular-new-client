@@ -56,8 +56,8 @@ export class EpisodeByIdComponent implements OnInit {
   loadJwplayer() {
     jwplayer('player').setup({
       // playlist: 'https://cdn.jwplayer.com/v2/media/8L4m9FJB',
-      file: '../assets/videos/Overlord 7.mp4',
-      image: '../assets/images/asobi.jpg',
+      file: '../assets/videos/2247_10.mp4',
+      image: '../assets/images/asobi.png',
       width: '100%',
       height: '100%',
       aspectratio: '16:9',

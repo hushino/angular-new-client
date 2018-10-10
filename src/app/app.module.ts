@@ -10,6 +10,7 @@ import { GenreByIdComponent } from './genre-by-id/genre-by-id.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     GenreByIdComponent,
     HomeComponent,
     PagenotfoundComponent,
+    LoginComponent,
   ],
   imports: [
     RouterModule.forRoot(

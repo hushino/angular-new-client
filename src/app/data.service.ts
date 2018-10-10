@@ -6,12 +6,17 @@ import { Home } from './home';
 import { AnimeById } from './animeById';
 import { EpisodeById } from './episodeById';
 import { TagByid } from './tagById';
+import {User} from './user';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
   constructor(private http: HttpClient) { }
+
+  getUser(nameofuser: number | string): Observable<User[]>{
+    return this.http.get<User[]>('http://localhost:8080/login/l/'+ nameofuser);
+  }
 
   // implementar el paginado con la url correcta
   getAll(): Observable<Anime[]> {
