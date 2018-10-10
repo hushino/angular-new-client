@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { CookieService } from "ngx-cookie-service";
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -45,9 +45,9 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,8 +15,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
  
-  getUser(nameofuser: number | string): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:8080/login/l/' + nameofuser);
+  getUser(checkUser: number | string): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:8080/login/l/' + checkUser);
   }
 
   addAnime(anime: Anime) {

@@ -13,18 +13,23 @@ export class LoginComponent implements OnInit {
 
   addForm: FormGroup;
 
+  cookieValue = 'UNKNOWN';
+
   constructor(private dataService: DataService, private router: Router,
-    private route: ActivatedRoute, private formBuilder: FormBuilder) { }
+    private route: ActivatedRoute, private formBuilder: FormBuilder,
+    private cookieService: CookieService ) { }
 
   ngOnInit() {
     this.addForm = this.formBuilder.group({
-      title: [] 
+      User: [] 
     })
+    this.cookieService.set( 'Test', 'Hello World' );
+    this.cookieValue = this.cookieService.get('Test');
   }
 
-  addOrEdit() {
-    this.dataService.addAnime(this.addForm.value)
-      .subscribe(anime =>
+  checkUser() {
+    this.dataService.getUser(this.addForm.value)
+      .subscribe(user =>
         this.router.navigate(['animes']));
   }
 }
