@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SerieComponent } from './serie/serie.component';
-import { SerieByIdComponent } from './serie-by-id/serie-by-id.component';
-import { EpisodeByIdComponent } from './episode-by-id/episode-by-id.component';
-import { GenreByIdComponent } from './genre-by-id/genre-by-id.component';
-import { HomeComponent } from './home/home.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SerieComponent } from './components/serie/serie.component';
+import { SerieByIdComponent } from './components/serie-by-id/serie-by-id.component';
+import { EpisodeByIdComponent } from './components/episode-by-id/episode-by-id.component';
+import { GenreByIdComponent } from './components/genre-by-id/genre-by-id.component';
+import { HomeComponent } from './components/home/home.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CookieService } from "ngx-cookie-service";
 
 const appRoutes: Routes = [

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../services/data.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 declare var jwplayer: any;
 @Component({

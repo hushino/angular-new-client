@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from 'selenium-webdriver/http';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../services/data.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 @Component({
   selector: 'app-home',

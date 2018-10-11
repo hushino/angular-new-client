@@ -1,17 +1,17 @@
-  <form [formGroup]="addForm" >
-    <div class="form-group">
-      <label for="User">User name</label>
-      <input type="text" class="form-control" id="User" formControlName="User" name="User">
-    </div>
+<form [formGroup]="addForm">
+  <div class="form-group">
+    <label for="User">User name</label>
+    <input type="text" class="form-control" id="User" formControlName="User" name="User">
+  </div>
 
-    <button type="submit" class="as" (click)="checkUser()">Submit</button>
+  <button type="submit" class="as" (click)="checkUser()">Submit</button>
 
-  </form>
+</form>
 
-  <div *ngIf="cookieService.get('Test'); else templateName">
-     true
+<div *ngIf="cookieService.get('Test'); else templateName">
+  true
 </div>
 
 <ng-template #templateName>
-    false
+  false
 </ng-template>
