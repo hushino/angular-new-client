@@ -1,27 +1,34 @@
-import { Injectable } from '@angular/core';
+import { Injectable,EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Anime } from '../models/anime';
 import { Home } from '../models/home';
 import { AnimeById } from '../models/animeById';
 import { EpisodeById } from '../models/episodeById';
 import { TagByid } from '../models/tagById';
-import { User } from '../models/user'; 
+import { User } from '../models/user';
+import { map } from "rxjs/operators";
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private headers = new Headers({'Content-Type': 'application/json'});
+  //private headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: HttpClient) { }
- 
-  getUser(checkUser: number | string): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:8080/login/l/' + checkUser);
+
+
+
+  getUser(user: User ) {
+    const headerss = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+    //let headers = new HttpHeaders();
+   // headers.set('Content-Type', 'application/x-www-form-urlencoded'); , withCredentials: true
+    return this.http.post<any>('http://localhost:8080/login/check/', user, {  headers: headerss,responseType: 'text' })
   }
 
   addAnime(anime: Anime) {
     const headers = new HttpHeaders().set('content-type', 'application/json');
-    return this.http.post('http://localhost:8080/v1/animes/',anime,{headers}) 
+    return this.http.post('http://localhost:8080/v1/animes/', anime, { headers })
   }
   // implementar el paginado con la url correcta
   getAll(): Observable<Anime[]> {

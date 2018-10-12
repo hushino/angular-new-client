@@ -17,19 +17,25 @@ export class LoginComponent implements OnInit {
 
   constructor(private dataService: DataService, private router: Router,
     private route: ActivatedRoute, private formBuilder: FormBuilder,
-    private cookieService: CookieService ) { }
+    private cookieService: CookieService) { }
 
   ngOnInit() {
     this.addForm = this.formBuilder.group({
-      User: [] 
+      User: []
     })
-    this.cookieService.set( 'Test', 'Hello World' );
-    this.cookieValue = this.cookieService.get('Test');
+    //this.cookieService.set( 'Test', 'Hello World' );
+    //this.cookieValue = this.cookieService.get('silogeado');
+    //localStorage.setItem(this.cookieValue, this.cookieValue);
+
   }
 
   checkUser() {
     this.dataService.getUser(this.addForm.value)
-      .subscribe(user =>
-        this.router.navigate(['animes']));
+      .subscribe(token => {
+        localStorage.setItem('token', token.text());
+        this.router.navigate(['animes']);
+        
+      })
   }
+
 }

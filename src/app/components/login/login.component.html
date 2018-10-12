@@ -1,4 +1,4 @@
-<form [formGroup]="addForm">
+<form [formGroup]="addForm" method="post">
   <div class="form-group">
     <label for="User">User name</label>
     <input type="text" class="form-control" id="User" formControlName="User" name="User">
@@ -8,7 +8,7 @@
 
 </form>
 
-<div *ngIf="cookieService.get('Test'); else templateName">
+<div *ngIf="cookieService.get('token'); else templateName">
   true
 </div>
 

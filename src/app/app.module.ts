@@ -9,11 +9,12 @@ import { EpisodeByIdComponent } from './components/episode-by-id/episode-by-id.c
 import { GenreByIdComponent } from './components/genre-by-id/genre-by-id.component';
 import { HomeComponent } from './components/home/home.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CookieService } from "ngx-cookie-service";
+import { interceptor } from './services/interceptor';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
