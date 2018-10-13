@@ -15,6 +15,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CookieService } from "ngx-cookie-service";
 import { interceptor } from './services/interceptor';
+import { AuthGuardService } from './auth-guard.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [CookieService],
+  providers: [CookieService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

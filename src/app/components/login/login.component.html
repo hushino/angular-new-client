@@ -1,10 +1,10 @@
-<form [formGroup]="addForm" method="post">
+<form [formGroup]="form" method="post" role="form">
   <div class="form-group">
-    <label for="User">User name</label>
-    <input type="text" class="form-control" id="User" formControlName="User" name="User">
+    <label for="user">User name</label>
+    <input type="text" class="form-control" id="user" formControlName="user" name="user">
   </div>
 
-  <button type="submit" class="as" (click)="checkUser()">Submit</button>
+  <button type="submit" class="as" (click)="checkUserr(form.value)">Submit</button>
 
 </form>
 

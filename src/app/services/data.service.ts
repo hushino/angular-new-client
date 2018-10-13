@@ -17,13 +17,11 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-
-
   getUser(user: User ) {
     const headerss = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
     //let headers = new HttpHeaders();
-   // headers.set('Content-Type', 'application/x-www-form-urlencoded'); , withCredentials: true
-    return this.http.post<any>('http://localhost:8080/login/check/', user, {  headers: headerss,responseType: 'text' })
+    // headers.set('Content-Type', 'application/x-www-form-urlencoded'); , withCredentials: true ,responseType: 'text' 
+    return this.http.post<any>('http://localhost:8080/login/check/', user, {  headers: headerss})
   }
 
   addAnime(anime: Anime) {
